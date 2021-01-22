@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "proto;user";
+
+service User {
+	rpc Register(ResuqestRegister)returns (ResponseRegister){}
+	rpc Login(ResquestLogin)returns (ResponseLogin){}
+	rpc GetUserInfo(ResquestUserInfo)returns(ResponseUserInfo){}
+}
+
+message ResuqestRegister{
+	string avatar =1;
+	string nick_name=2;
+	string name=3;
+	string password =4;
+	string re_password=5;
+	int32 sex=6;
+	string tel=7;
+}
+message ResponseRegister{
+	int32 code = 1;
+	string msg = 2;
+	string nick_name = 3;
+}
+message ResquestLogin{
+	string nick_name=1;
+	string password=2;
+}
+message  ResponseLogin{
+	int32 code = 1;
+	string msg = 2;
+	string nick_name = 3;
+}
+message ResquestUserInfo{
+	string nick_name=1;
+
+}
+message  ResponseUserInfo{
+	int32 code = 1;
+	string msg = 2;
+	string nick_name = 3;
+}
