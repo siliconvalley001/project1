@@ -1,0 +1,14 @@
+Server:
+  HttpPort: 8080
+  RunMode: "debug"
+  ReadTimeOut: 60
+  WriteTimeOut: 60
+Mysql:
+  Host: "127.0.0.1"
+  Name: "root"
+  Port: "3306"
+  PassWord: "Li01200602"
+  DBName: "vue_project"
+  Charset: "uft8"
+  MaxIdleConns: 10
+  MaxOpenConns: 10
